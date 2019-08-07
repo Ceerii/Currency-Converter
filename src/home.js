@@ -5,12 +5,12 @@ import './App.css';
 class Home extends React.Component{
 
     state={
-           currencies: ['USD', 'AUD', 'NGN', 'EUR', 'SGD', 'PHP', ],
+           currencies: ['USD', 'AUD','EUR', 'SGD', 'PHP', ],
            base:'USD',
-           amount: '',
-           convertTo:'',
-           result:'',
-           date:''
+           amount: '0',
+           convertTo:'EUR',
+           result:'0',
+           date:'yy/mm/dd'
     };
 
     handleSelect = (e) => {
@@ -53,38 +53,41 @@ class Home extends React.Component{
     render(){
         const {currencies, base, amount, convertTo, result, date} = this.state
         return(
-            <div className="container">
-            <div className="container-text">
-            <p className="title">CURRENCY CONVERTER</p>
-            <p className="first-currency">{amount} {base} is equal to</p>
-            <p className="second-currency">{result === null ? "Calculating... ": result} {convertTo}</p>
-            <p className="time">As of {date}</p>
-            <div className="input-value">
-            <form className="input-form">
-            <input onChange={this.handleInput} type="number"  value={amount} className="input-box"   />
-            <select name="base" value={base} onChange={this.handleSelect}  className="input-select">
-            {currencies.map(currency =><option key={currency} value={currency}>
-                 {currency}
-              </option>
+             <div className="converter">
+             
+             <div className="first-container">
+             <p className="texts">Currency Converter</p>
+             <label>Amount</label>
+             <input onChange={this.handleInput} type="number"  value={amount} className="input"></input>
+             <label>From:</label>
+             <select className="select" name="base" value={base} onChange={this.handleSelect}>
+             {currencies.map(currency =><option key={currency} value={currency}>
+                  {currency}
+               </option>
                 )}
-            </select>
-            </form>
-
-            <form className="input-form">
-            <input disabled={true}   value={result === null ? "Calculating... ": result} className="input-box" type="number"/>
-            <select name="convertTo" value={convertTo} onChange={this.handleSelect} className="input-select">
-            {currencies.map(currency =><option key={currency} value={currency}>
-                 {currency}
-              </option>
+             </select>
+             <label>To:</label>
+             <select name="convertTo" value={convertTo} onChange={this.handleSelect} className="select">
+             {currencies.map(currency =><option key={currency} value={currency}>
+                  {currency}
+               </option>                
                 )}
-            </select>
-            </form>
+             </select>
+             
+             </div>
+             <div className="second-container">
+             <div>
+             <p className="yeah"><span className="amount">{amount}</span><span className="base">{base}</span> </p>
+             <p className="equal">=</p>
+             <p className="yeah"><span>{result === null ? "Calculating... ": result}{convertTo}</span></p>
+             <p className="dates">As of </p>
+             <div className="date">{date}</div>
+             </div>
+             
+             </div>
 
-            </div>
-
-            </div>
-            </div>
-
+             </div>
+            
         );
     };
 };

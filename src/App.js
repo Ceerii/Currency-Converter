@@ -1,11 +1,14 @@
 import React from 'react';
-import Home from './home';
 import './App.css';
+import Home from "./home"
 
 class App extends React.Component{
   render(){
     return (
-     <Home/>
+      <div>
+          <Home/>
+      </div>
+    
     );
   }
 }

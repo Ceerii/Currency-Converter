@@ -1,23 +1,161 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+  margin:0;
+  padding:0;
+  border:box-sizing;
+  outline:none;
+  border:none;
+}
 body{
-  background: black;
+  background: white;
   width:100%;
   height:100%;
-}
-.container{
-  width:100%;
-  max-width:100%;
-  height:100%;
+  outline:none;
+  border:none;
   display:flex;
-  justify-content:center;
-  
+  justify-content: center;
+  flex-direction: row;
+  font-family: 'Open Sans', sans-serif;
 }
-.container-text{
-  color:#a8b2d1;
+.converter{
+  display:flex;
+  flex-direction:row;
+  margin:100px;
+  box-shadow:0 1px 3px 0 rgba(0,0,0,0.4), 0 -1px -3px 0 rgba(0,0,0,0.4);
+}
+
+/* .container-text{
+  color:black;
 }
 .title{
-  color:#a8b2d1;
+  color:black;
   font-family: 'Rubik Mono One', sans-serif;
   font-size:50px;
+}
+input{
+  width:200px;
+  height:40px;
+  border:none;
+  text-indent:10px;
+  outline:none;
+
+}
+show{
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+  font-size:18px;
+  font-weight:bold;
+}
+.base{
+  font-weight:bolder;
+  font-size:20px;
+  margin-left:2px;
+}
+.amount{
+  font-size:20px;
+
+}
+select{
+  width:60px;
+  height:45px;
+  outline:none;
+}
+.input-form{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+.input-value{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  margin:0 90px;
+}
+.converter{
+  width:600px;
+  height:400px;
+  display: flex;
+  flex-direction:center;
+
+} */
+.first-container{
+  background:blueviolet;
+  width:300px;
+  height:400px;
+  padding:10px;
+  padding-left:20px;
+  display:flex;
+  flex-direction: column;
+  
+}
+input{
+  width:280px;
+  text-indent:18px;
+  height:30px;
+  border-radius:10px;
+}
+select{
+  width:280px;
+  height:30px;
+  border-radius:10px;
+}
+.yeah{
+  color:white;
+}
+label{
+  font-weight:bold;
+  color:white;
+  margin-top:30px;
+}
+button{
+  width:280px;
+  height:30px;
+  border-radius:10px;
+  margin-top:30px;
+  background:black;
+  color:white;
+  font-weight:bold;
+}
+.second-container{
+  display:flex;
+  flex-direction:column;
+  padding-left:20px;
+  background:black;
+  width:300px;
+  height:400px;
+  padding:10px;
+}
+
+.texts{
+  font-size:18px;
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bold;
+}
+span{
+  font-weight:bold;
+  font-size:40px;
+}
+.second-container>div{
+  margin-top:100px;
+  margin-left:80px;
+}
+.dates{
+  color:white;
+  margin-left:40px;
+}
+.date{
+  color:white;
+  margin-left:3px;
+  margin-top:15px;
+  font-size:24px;
+  font-weight:bold;
+}
+.equal{
+  font-size:20px;
+  font-weight:bold;
+  color:white;
+ margin-left:45px;
 }
